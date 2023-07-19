@@ -48,6 +48,19 @@ auto-agenda:
 - Cyber attacks can be passive or active, whereas active attacks are more dangerous as they can modify the data or prevent its transmission
 :::
 
+## Smart Micro Grid 
+![](./images/smg.png){fig-align="center"}
+
+
+## Multi Smart Micro Grid
+![](./images/multi_smg.png){fig-align="center"}
+
+## SMG Threat
+![](./images/multi_smg_threat.png){fig-align="center"}
+
+## Proposed Architecture
+![](./images/multi_smg_fed.png){fig-align="center"}
+
 # Problem Formulation
 ## Mathamtical Formulation
 ### Demand Supply Cost {auto-animate="true"}
