@@ -581,5 +581,8 @@ Find codes in our Github: [GitHub](https://github.com/anwaybose/Federated_Microg
 
 ::: {.column width="33%"}
 ![Dr. Li Bai (li.bai@temple.edu)](./images/li_bai.png){width=150% fig-align="right"}
+<<<<<<< HEAD
+=======
 :::
+>>>>>>> 186d1775f4cf1e9036545bb239ac53ad58d1fd55
 :::
