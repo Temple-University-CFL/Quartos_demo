@@ -41,33 +41,37 @@ auto-agenda:
 # Motivation
 
 ## Motivation
+
 ::: {.callout-note title="Motivation"}
+-   The integration of Internet of Things (IoT) in Smart Microgrid systems generates a complex interconnected network that produces a significant amount of data, often stored in the cloud, raising concerns over data security
 
--  The integration of Internet of Things (IoT) in Smart Microgrid systems generates a complex interconnected network that produces a significant amount of data, often stored in the cloud, raising concerns over data security
-
-- Cyber attacks can be passive or active, whereas active attacks are more dangerous as they can modify the data or prevent its transmission
+-   Cyber attacks can be passive or active, whereas active attacks are more dangerous as they can modify the data or prevent its transmission
 :::
 
-## Smart Micro Grid 
+## Smart Micro Grid
+
 ![](./images/smg.png){fig-align="center"}
 
-
 ## Multi Smart Micro Grid
+
 ![](./images/multi_smg.png){fig-align="center"}
 
 ## SMG Threat
+
 ![](./images/multi_smg_threat.png){fig-align="center"}
 
 ## Proposed Architecture
+
 ![](./images/multi_smg_fed.png){fig-align="center"}
 
 # Problem Formulation
+
 ## Mathamtical Formulation
+
 ### Demand Supply Cost {auto-animate="true"}
 
 ::: columns
 ::: {.column width="65%"}
-
 ::: {.callout-note title="Variables"}
 $i \rightarrow \text{Microgrid, where} \ i \in \{ 1,..., N_{MG} \}$ and
 
@@ -75,17 +79,15 @@ $j \rightarrow \text{Customer of i, where} \ j \in \{ 1,..., N_{i} \}$
 :::
 :::
 
-
 ::: {.column width="35%"}
 ![](./images/multi_smg.png){fig-align="right"}
 :::
 :::
 
-
 ## Demand Supply Cost {auto-animate="true"}
+
 ::: columns
 ::: {.column width="65%"}
-
 ::: {.callout-note title="Variables"}
 $i \rightarrow \text{Microgrid, where} \ i \in \{ 1,..., N_{MG} \}$ and
 
@@ -94,23 +96,16 @@ $j \rightarrow \text{Customer of i, where} \ j \in \{ 1,..., N_{i} \}$
 Let $L_i^j$ be the demand and $C(L_i^j)$ be the cost of supply that demand
 :::
 :::
-
-
 
 ::: {.column width="35%"}
 ![](./images/multi_smg.png){fig-align="right"}
 :::
 :::
 
-
-
-
-
-
 ## Demand Supply Cost {auto-animate="true"}
+
 ::: columns
 ::: {.column width="69%"}
-
 ::: {.callout-note title="Variables"}
 $i \rightarrow \text{Microgrid, where} \ i \in \{ 1,..., N_{MG} \}$ and
 
@@ -119,8 +114,6 @@ $j \rightarrow \text{Customer of i, where} \ j \in \{ 1,..., N_{i} \}$
 Let $L_i^j$ be the demand and $C(L_i^j)$ be the cost of supply that demand
 :::
 :::
-
-
 
 ::: {.column width="31%"}
 ![](./images/multi_smg.png){fig-align="right"}
@@ -137,9 +130,8 @@ $$\sum_{j=1}^{N_i} \phi_{i}^j \left(\int_{0}^{T} C(L_i^j(t))\, dt\right)$$
 
 ::: columns
 ::: {.column width="65%"}
-
 ::: {.callout-note title="Variables"}
-$i \rightarrow \text{Microgrid} \ i \in \{ 1,..., N_{MG} \}$ and 
+$i \rightarrow \text{Microgrid} \ i \in \{ 1,..., N_{MG} \}$ and
 
 $p_{i,g}$ is the $g$-th power profile in the total power profile pool $P_i$ of $i$-th MG
 :::
@@ -154,9 +146,8 @@ $p_{i,g}$ is the $g$-th power profile in the total power profile pool $P_i$ of $
 
 ::: columns
 ::: {.column width="65%"}
-
 ::: {.callout-note title="Variables"}
-$i \rightarrow \text{Microgrid} \ i \in \{ 1,..., N_{MG} \}$ and 
+$i \rightarrow \text{Microgrid} \ i \in \{ 1,..., N_{MG} \}$ and
 
 $p_{i,g}$ is the $g$-th power profile in the total power profile pool $P_i$ of $i$-th MG
 
@@ -170,11 +161,11 @@ $C(p_{i,g)}(t))$ is the cost of each of $g$ power sources used at time $t$
 :::
 
 ## Generation Cost {auto-animate="true"}
+
 ::: columns
 ::: {.column width="69%"}
-
 ::: {.callout-note title="Variables"}
-$i \rightarrow \text{Microgrid} \ i \in \{ 1,..., N_{MG} \}$ and 
+$i \rightarrow \text{Microgrid} \ i \in \{ 1,..., N_{MG} \}$ and
 
 $p_{i,g}$ is the $g$-th power profile in the total power profile pool $P_i$ of $i$-th MG
 
@@ -183,7 +174,7 @@ $C(p_{i,g)}(t))$ is the cost of each of $g$ power sources used at time $t$
 :::
 
 ::: {.column width="31%"}
-![](./images/smg.png){width=80% fig-align="right"}
+![](./images/smg.png){width="80%" fig-align="right"}
 :::
 :::
 
@@ -193,27 +184,26 @@ Considering a time span of $T$ and an boolean indicator $\psi_{(i,j)} \in \{0,1\
 $$ \sum_{p_{i,g} \in P_i } \psi_{(i,g)}  \left(\int_{0}^{T} C(p_{i,g}(t))\, dt\right)$$
 :::
 
-
-
 ## The OPF Problem {auto-animate="true"}
+
 Considering boolean $\pi_i \in \{0,1\}$ indicating the intrigation of the $i^{th}$ MG to the SG
 
 ## The OPF Problem {auto-animate="true"}
+
 Considering boolean $\pi_i \in \{0,1\}$ indicating the intrigation of the $i^{th}$ MG to the SG
 
 ::: {.callout-note title="The OPF cost is given by"}
-
 $$\begin{split}
     \min_{\pi_{i}, \psi_{(i,g)}, \phi_{i}^j} \quad \sum_{i \in N_{MG}}  \pi_{i} & \sum_{p_{i,g} \in P_i } \psi_{(i,g)}  \left(\int_{0}^{T} C(p_{i,g}(t))\, dt\right)  + \sum_{j=1}^{N_i} \phi_{i}^j \left(\int_{0}^{T} C(L_i^j(t))\, dt\right) 
     \end{split}$$
 :::
 
-
 ## The OPF Constraints {auto-animate="true"}
+
 Eeach power profile $p_{i,g}(t)$ must be limited with the following three constraints
 
-
 ## The OPF Constraints {auto-animate="true"}
+
 Eeach power profile $p_{i,g}(t)$ must be limited with the following three constraints
 
 ::: {.callout-note title="Generation limits"}
@@ -221,6 +211,7 @@ $$p_{(i,g)}^{min} \leq p_{(i,g)}(t)\leq p_{(i,g)}^{max} \qquad \forall \quad p_{
 :::
 
 ## The OPF Constraints {auto-animate="true"}
+
 Eeach power profile $p_{i,g}(t)$ must be limited with the following three constraints
 
 ::: {.callout-note title="Generation limits"}
@@ -231,8 +222,8 @@ $$p_{(i,g)}^{min} \leq p_{(i,g)}(t)\leq p_{(i,g)}^{max} \qquad \forall \quad p_{
 $$^{r_{down}}_{(i,g)} \leq p_{(i,g)}(t+1) - p_{(i,g)}(t) \leq p^{r_{up}}_{(i,g)} \quad \forall t \in T$$
 :::
 
-
 ## The OPF Constraints {auto-animate="true"}
+
 ::: {.callout-note title="Generation limits"}
 $$p_{(i,g)}^{min} \leq p_{(i,g)}(t)\leq p_{(i,g)}^{max} \qquad \forall \quad p_{(i,g)} \in P_i^1, t \in T$$
 :::
@@ -245,8 +236,8 @@ $$^{r_{down}}_{(i,g)} \leq p_{(i,g)}(t+1) - p_{(i,g)}(t) \leq p^{r_{up}}_{(i,g)}
 $$\sum_{p_{(i,g)} \in P_i} p_{(i,g)}(t) \geq \sum_{j =1}^{j=N_i} L^j_{i}(t) \quad \forall t \in T$$
 :::
 
-
 ## Definition {auto-animate="true"}
+
 We define
 
 ::: {.callout-note title="Definition"}
@@ -256,10 +247,9 @@ $$\delta(a,b) =     \begin{cases}
     \end{cases}$$
 :::
 
-
-
 ## Stability in SMG {auto-animate="true"}
-We define 
+
+We define
 
 ::: {.callout-note title="Definition"}
 $$\delta(a,b) =     \begin{cases}
@@ -277,6 +267,7 @@ $\gamma_i \rightarrow$ maximum allowable reaction time
 :::
 
 ## Total Power {auto-animate="true"}
+
 From each generation profile $P_{i}$ we obtain
 
 ::: {.callout-note title="Reaction Time"}
@@ -287,15 +278,15 @@ $\gamma_i \rightarrow$ maximum allowable reaction time
 
 If $\gamma_i < s_i$ the energy source is not adequate to supply sufficient energy demands
 
-::: {.callout-note }
+::: callout-note
 $$\delta(\gamma_i,s_i) =     \begin{cases}
       0, & \text{if}\ \gamma_i < s_i\\
       1, & \text{otherwise}
     \end{cases}$$
 :::
 
-
 ## Total Power {auto-animate="true"}
+
 ---
 #$s_i \rightarrow$ minimum required reaction time
 
@@ -304,7 +295,7 @@ $$\delta(\gamma_i,s_i) =     \begin{cases}
 
 If $\gamma_i < s_i$ the energy source is not adequate to supply sufficient energy demands
 
-::: {.callout-note }
+::: callout-note
 $$\delta(\gamma_i,s_i) =     \begin{cases}
       0, & \text{if}\ \gamma_i < s_i\\
       1, & \text{otherwise}
@@ -317,8 +308,8 @@ The total generated power in the SG is defined by
 $$\sum_{i \in N_{MG}} \pi_i \delta(\gamma_i,s_i) \cdot P_i = P_{total}$$
 :::
 
-
 ## Active Loads {auto-animate="true"}
+
 From each load profile $L^j_{i}$ we obtain
 
 ::: {.callout-note title="Load reaction time"}
@@ -327,8 +318,8 @@ $r_i^j \rightarrow$ minimum required reaction time
 $\tau_i^j \rightarrow$ maximum allowable reaction time
 :::
 
-
 ## Active Loads {auto-animate="true"}
+
 From each load profile $L^j_{i}$ we obtain
 
 ::: {.callout-note title="Load reaction time"}
@@ -337,17 +328,16 @@ $r_i^j \rightarrow$ minimum required reaction time
 $\tau_i^j \rightarrow$ maximum allowable reaction time
 :::
 
-::: {.callout-note }
+::: callout-note
 $$\delta(\tau_i^j,r_i^j) =     \begin{cases}
       0, & \text{if}\ \tau_i^j < r_i^j\\
       1, & \text{otherwise}
     \end{cases}$$
 :::
 
-
 ## Active Loads {auto-animate="true"}
 
-::: {.callout-note }
+::: callout-note
 $$\delta(\tau_i^j,r_i^j) =     \begin{cases}
       0, & \text{if}\ \tau_i^j < r_i^j\\
       1, & \text{otherwise}
@@ -360,9 +350,9 @@ the number of active and fulfilled demand loads
 $$\sum_{j \in N_i} \phi_{i}^j \delta(\tau_i^j, r_i^j) = N_i^{active} \subseteq N_i$$
 :::
 
-
 ## Total Load Demand {auto-animate="true"}
-::: {.callout-note }
+
+::: callout-note
 $$\delta(\tau_i^j,r_i^j) =     \begin{cases}
       0, & \text{if}\ \tau_i^j < r_i^j\\
       1, & \text{otherwise}
@@ -375,9 +365,8 @@ The total SG load demand
 $$\sum_{i \in N_{MG}} \pi_i \sum_{j \in N_i} \phi_{i}^j \delta(\tau_i^j, r_i^j)\cdot L_i^j = L_{total}$$
 :::
 
-
-
 ## Stability in SMG {auto-animate="true"}
+
 The stability classification is defined as
 
 ::: {.callout-note title="Stability Classification"}
@@ -387,8 +376,8 @@ $$\delta(P_{total}, L_{total}) =     \begin{cases}
     \end{cases}$$
 :::
 
-    
 ## Stability in SMG {auto-animate="true"}
+
 The stability classification is defined as
 
 ::: {.callout-note title="Stability Classification"}
@@ -398,16 +387,15 @@ $$\delta(P_{total}, L_{total}) =     \begin{cases}
     \end{cases}$$
 :::
 
-::: {.callout-note }
+::: callout-note
 $$\delta \left(\sum_{i \in N_{MG}} \pi_i \delta(\gamma_i,s_i) \cdot P_i  ,  \sum_{i \in N_{MG}} \pi_i \sum_{j \in N_i} \phi_{i}^j \delta(\tau_i^j, r_i^j)\cdot L_i^j \right) =     \begin{cases}
       0, & \text{unstable}\\
       1, & \text{stable}
     \end{cases}$$
 :::
 
-
-
 ## Stability Feature Selection {auto-animate="true"}
+
 The stability classification is defined as
 
 ::: {.callout-note title="Stability Classification"}
@@ -431,66 +419,64 @@ Stability predicting features are
 $$\boldsymbol X = \left[ P_i, L_i^j, \gamma_i, \tau_i^j, C(P_i), C(L_i^j) \right] \quad \forall i \in N_{MG}, \forall j \in N_i$$
 :::
 
-:::{.callout-note title="Microgrid Table"}
-| $\gamma_i$ | $\tau_i^1$ | $\tau_i^2$ | $\tau_i^3$ | $P_i$ | $L_i^1$ | $L_i^2$ | $L_i^3$ | $C(P_i)$ | $C(L_i^1)$ | $C(L_i^2)$ | $C(L_i^3)$ | stability |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| 2.9590 | 3.0798 | 8.3810 | 9.7807 | 3.7630 | -0.7826 | -1.2573 | -1.7230 | 0.6504 | 0.8595 | 0.8874 | 0.9580 | 0 (unstable) |
-| 9.3040 | 4.9025 | 3.0475 | 1.3693 | 5.0678 | -1.9400 | -1.8727 | -1.2550 | 0.4134 | 0.8624 | 0.5621 | 0.7817 | 1 <br>(stable)  |
-| 2.9590 | 3.0798 | 8.3810 | 9.7807 | 3.7630 | -0.7826 | -1.2573 | -1.7230 | 0.6504 | 0.8595 | 0.8874 | 0.9580 | 0 (unstable) |
-| 2.9590 | 3.0798 | 8.3810 | 9.7807 | 3.7630 | -0.7826 | -1.2573 | -1.7230 | 0.6504 | 0.8595 | 0.8874 | 0.9580 | 0 (unstable) |
+::: {.callout-note title="Microgrid Table"}
+| $\gamma_i$ | $\tau_i^1$ | $\tau_i^2$ | $\tau_i^3$ | $P_i$  | $L_i^1$ | $L_i^2$ | $L_i^3$ | $C(P_i)$ | $C(L_i^1)$ | $C(L_i^2)$ | $C(L_i^3)$ |   stability    |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|   2.9590   |   3.0798   |   8.3810   |   9.7807   | 3.7630 | -0.7826 | -1.2573 | -1.7230 |  0.6504  |   0.8595   |   0.8874   |   0.9580   |  0 (unstable)  |
+|   9.3040   |   4.9025   |   3.0475   |   1.3693   | 5.0678 | -1.9400 | -1.8727 | -1.2550 |  0.4134  |   0.8624   |   0.5621   |   0.7817   | 1 <br>(stable) |
+|   2.9590   |   3.0798   |   8.3810   |   9.7807   | 3.7630 | -0.7826 | -1.2573 | -1.7230 |  0.6504  |   0.8595   |   0.8874   |   0.9580   |  0 (unstable)  |
+|   2.9590   |   3.0798   |   8.3810   |   9.7807   | 3.7630 | -0.7826 | -1.2573 | -1.7230 |  0.6504  |   0.8595   |   0.8874   |   0.9580   |  0 (unstable)  |
 :::
 
 # Proposed Architecture
 
 ## Cost Function {auto-animate="true"}
+
 Our goal is to solve
 
-:::{.callout-note title="Cost Function"}
+::: {.callout-note title="Cost Function"}
 $$\max_{\boldsymbol w} \mathcal{P}(y=0,1|\boldsymbol X, \boldsymbol w)$$
 :::
-
 
 ## ANN {auto-animate="true"}
+
 Our goal is to solve:
 
-:::{.callout-note title="Cost Function"}
+::: {.callout-note title="Cost Function"}
 $$\max_{\boldsymbol w} \mathcal{P}(y=0,1|\boldsymbol X, \boldsymbol w)$$
 :::
 
 ::: columns
 ::: {.column width="49%"}
-![](./images/ANN.png){width=100%}
+![](./images/ANN.png){width="100%"}
 :::
 
 ::: {.column width="2%"}
 :::
 :::
 
+## ANN {auto-animate="true"}
 
-
-
-## ANN {auto-animate="true"} 
 Our goal is to solve:
 
-:::{.callout-note title="Cost Function"}
+::: {.callout-note title="Cost Function"}
 $$\max_{\boldsymbol w} \mathcal{P}(y=0,1|\boldsymbol X, \boldsymbol w)$$
 :::
 
 ::: columns
 ::: {.column width="49%"}
-![](./images/ANN.png){width=140%}
+![](./images/ANN.png){width="140%"}
 :::
 
 ::: {.column width="2%"}
 :::
 
 ::: {.column width="49%"}
-
-:::{.callout-note title="ReLU"}
+::: {.callout-note title="ReLU"}
 $$p(y= 0,1|\boldsymbol X) = \max\{0, y \boldsymbol w^T \boldsymbol X \}$$
 :::
 
-:::{.callout-note title="Sigmoid"}
+::: {.callout-note title="Sigmoid"}
 $$p(y=0, 1|\boldsymbol X) = \frac{1}{1+e^{-y \boldsymbol w^T \boldsymbol X}}$$
 :::
 :::
@@ -500,87 +486,100 @@ $$p(y=0, 1|\boldsymbol X) = \frac{1}{1+e^{-y \boldsymbol w^T \boldsymbol X}}$$
 
 ## Transport Layer Security
 
-:::{.callout-note title="XCA"}
+::: {.callout-note title="XCA"}
 :::
 
 ![](./images/TLS.png)
 
-
 ## Model Encryption
 
-:::{.callout-note title="TGDH"}
+::: {.callout-note title="TGDH"}
 :::
 
 ![](./images/TGDH.png)
 
-
 ## Encrypted Federated Architecture {auto-animate="true"}
+
 ![](./images/step_1.png)
 
-
 ## Encrypted Federated Architecture {auto-animate="true"}
+
 ![](./images/step_2.png)
 
-
 ## Encrypted Federated Architecture {auto-animate="true"}
+
 ![](./images/step_3.png)
 
-
 ## Encrypted Federated Architecture {auto-animate="true"}
+
 ![](./images/step_4.png)
 
-
 ## Encrypted Federated Architecture {auto-animate="true"}
+
 ![](./images/step_5.png)
 
-
 ## Encrypted Federated Architecture {auto-animate="true"}
+
 ![](./images/step_6.png)
 
 # Experimental Results and analysis
 
 ## Experimental Result {auto-animate="true"}
-:::{.callout-note title="Centralized Vs Decentralized"}
+
+::: {.callout-note title="Centralized Vs Decentralized"}
 :::
 
 ![](./images/cendecen.png)
 
-
 ## Experimental Result {auto-animate="true"}
-:::{.callout-note title="Data overlap accuracy"}
+
+::: {.callout-note title="Data overlap accuracy"}
 :::
 
-
-![](./images/overlap.png){width=80%}
-
+![](./images/overlap.png){width="80%"}
 
 # Conclusion
 
 ## Conclusion & Future Work {.smaller}
+
 <br>
 
-:::{.callout-note title="Conclusion"}
+::: {.callout-note title="Conclusion"}
+-   A fully decentralized architecture for secure federated learning to predict stability in microgrids.
 
-* A fully decentralized architecture for secure federated learning to predict stability in microgrids.
+-   Analysis demonstrates that the federated learning approach is entirely decentralized and secure, protecting private data while maintaining system stability
 
-* Analysis demonstrates that the federated learning approach is entirely decentralized and secure, protecting private data while maintaining system stability
-
-* The architecture is dynamic and adaptable to network changes, such as the addition or failure of a microgrid, without disrupting its secure operation
-
+-   The architecture is dynamic and adaptable to network changes, such as the addition or failure of a microgrid, without disrupting its secure operation
 :::
 
-:::{.callout-note title="Future Work"}
-
-* Investigating homomorphic cryptography’s potential for federated learning, which allows the secure processing of sensitive data without decryption, thereby preserving its privacy and security
-
+::: {.callout-note title="Future Work"}
+-   Investigating homomorphic cryptography's potential for federated learning, which allows the secure processing of sensitive data without decryption, thereby preserving its privacy and security
 :::
 
-![](./images/flowcode.png){fig-align="right" width=40%}
+![](./images/flowcode.png){fig-align="right" width="40%"}
 
 ::: footer
 Find codes in our Github: [GitHub](https://github.com/anwaybose/Federated_Microgrid)
 :::
 
-
-
 ## THANK YOU
+
+::: columns
+::: {.column width="33%"}
+![Abtahi Reza](./images/Abtahi_reza.jpg){fig-align="left"}
+:::
+
+::: {.column width="0.5%"}
+:::
+
+::: {.column width="33%"}
+![Anway Bose](./images/abose.jpg){width=150% fig-align="center"}
+:::
+
+::: {.column width="0.5%"}
+:::
+
+::: {.column width="33%"}
+![Dr. Li Bai](./images/lbai.jpg){width=150% fig-align="right"}
+:::
+:::
