@@ -580,6 +580,6 @@ Find codes in our Github: [GitHub](https://github.com/anwaybose/Federated_Microg
 :::
 
 ::: {.column width="33%"}
-![Dr. Li Bai](./images/lbai.jpg){width=150% fig-align="right"}
+![Dr. Li Bai](./images/li_bai.png){width=150% fig-align="right"}
 :::
 :::
