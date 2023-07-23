@@ -573,13 +573,13 @@ Find codes in our Github: [GitHub](https://github.com/anwaybose/Federated_Microg
 :::
 
 ::: {.column width="33%"}
-![Anway Bose](./images/abose.jpg){width=150% fig-align="center"}
+![Anway Bose (anway.bose@temple.edu)](./images/abose.jpg){width=150% fig-align="center"}
 :::
 
 ::: {.column width="0.5%"}
 :::
 
 ::: {.column width="33%"}
-![Dr. Li Bai](./images/li_bai.png){width=150% fig-align="right"}
+![Dr. Li Bai (li.bai@temple.edu)](./images/li_bai.png){width=150% fig-align="right"}
 :::
 :::
