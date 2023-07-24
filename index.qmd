@@ -194,7 +194,7 @@ Considering boolean $\pi_i \in \{0,1\}$ indicating the intrigation of the $i^{th
 
 ::: {.callout-note title="The OPF cost is given by"}
 $$\begin{split}
-    \min_{\pi_{i}, \psi_{(i,g)}, \phi_{i}^j} \quad \sum_{i \in N_{MG}}  \pi_{i} & \sum_{p_{i,g} \in P_i } \psi_{(i,g)}  \left(\int_{0}^{T} C(p_{i,g}(t))\, dt\right)  + \sum_{j=1}^{N_i} \phi_{i}^j \left(\int_{0}^{T} C(L_i^j(t))\, dt\right) 
+    \min_{\pi_{i}, \psi_{(i,g)}, \phi_{i}^j} \quad \sum_{i \in N_{MG}}  \pi_{i} & \left( \sum_{p_{i,g} \in P_i } \psi_{(i,g)}  \left(\int_{0}^{T} C(p_{i,g}(t))\, dt\right)  + \sum_{j=1}^{N_i} \phi_{i}^j \left(\int_{0}^{T} C(L_i^j(t))\, dt\right) \right)
     \end{split}$$
 :::
 
